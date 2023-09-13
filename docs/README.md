@@ -1,9 +1,12 @@
-Dear ImGui
+Dear ImGui (with cmake!)
 =====
 
 <center><b><i>"Give someone state and they'll have a bug one day, but teach them how to represent state in two separate locations that have to be kept in sync and they'll have bugs for a lifetime."</i></b></center> <a href="https://twitter.com/rygorous/status/1507178315886444544">-ryg</a>
 
 ----
+Same ImGui, but with CMakeLists.txt that allows it to be added through ExternalProject_Add.
+Currently made to work for SDL2 project, but I am planning to extend the functionality.
+Merge requests are welcome :D
 
 [![Build Status](https://github.com/ocornut/imgui/workflows/build/badge.svg)](https://github.com/ocornut/imgui/actions?workflow=build) [![Static Analysis Status](https://github.com/ocornut/imgui/workflows/static-analysis/badge.svg)](https://github.com/ocornut/imgui/actions?workflow=static-analysis) [![Tests Status](https://github.com/ocornut/imgui_test_engine/workflows/tests/badge.svg)](https://github.com/ocornut/imgui_test_engine/actions?workflow=tests)
 
