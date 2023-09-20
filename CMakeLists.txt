@@ -2,6 +2,9 @@ project(imgui-with-cmake)
 
 find_package(SDL2 REQUIRED)
 
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(DIRECTFB REQUIRED directfb)
+
 add_library(imgui STATIC)
 
 target_sources(imgui
@@ -28,7 +31,8 @@ set(IMGUI_HEADERS
 target_include_directories(imgui
     PUBLIC
     ${IMGUI_INCLUDE_DIR}
-    ${SDL2_INCLUDE_DIR})
+    ${SDL2_INCLUDE_DIR}
+    ${DIRECTFB_INCLUDE_DIRS})
 
 install(TARGETS imgui DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 install(FILES ${IMGUI_HEADERS} DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
